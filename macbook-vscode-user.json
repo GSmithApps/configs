@@ -1,57 +1,57 @@
 {
-    "window.autoDetectColorScheme": true,
-    "workbench.preferredLightColorTheme": "Solarized Light",
-    "workbench.colorCustomizations": {
-        "[Solarized Light]": {
-            "editor.lineHighlightBackground": "#00000000",
-            "editor.lineHighlightBorder": "#00000000",
-        },
-        "[Dark Modern]": {
-            "editor.lineHighlightBackground": "#00000000",
-            "editor.lineHighlightBorder": "#00000000",
-        },
-        "[Default Dark Modern]": {
-            "editor.lineHighlightBackground": "#00000000",
-            "editor.lineHighlightBorder": "#00000000",
-            "editor.inlineValuesBackground": "#00000000",
-            "editor.inlineValuesForeground": "#00000000",
-        }
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "gitlens.currentLine.enabled": false,
-    "editor.occurrencesHighlight": "off",
-    "scm.diffDecorations": "none",
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.codeLens": false,
-    "files.autoSave": "afterDelay",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.activityBar.location": "hidden",
-    "editor.padding.top": 20,
-    "workbench.tree.renderIndentGuides": "none",
     "editor.guides.highlightActiveIndentation": false,
     "editor.guides.indentation": false,
     "editor.lineNumbers": "off",
     "editor.minimap.enabled": false,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "jupyter.askForKernelRestart": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.padding.top": 20,
+    "files.autoSave": "afterDelay",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableCodeActions": false,
     "github.copilot.enable": {
         "*": true,
-        "plaintext": true,
+        "idris": false,
         "markdown": true,
-        "scminput": false,
-        "idris": false
+        "plaintext": true,
+        "scminput": false
     },
-    "github.copilot.editor.enableCodeActions": false,
-    "github.copilot.editor.enableAutoCompletions": true,
+    "gitlens.currentLine.enabled": false,
+    "hediet.vscode-drawio.resizeImages": null,
+    "idris.idris2Mode": true,
+    "idris.idrisPath": "idris2",
+    "julia.symbolCacheDownload": true,
+    "jupyter.askForKernelRestart": false,
+    "latex-workshop.linting.chktex.enabled": true,
+    "scm.diffDecorations": "none",
     "terminal.integrated.commandsToSkipShell": [
         "github.copilot.terminal.suggestCommand",
         "language-julia.interrupt"
     ],
-    "hediet.vscode-drawio.resizeImages": null,
-    "latex-workshop.linting.chktex.enabled": true,
-    "julia.symbolCacheDownload": true,
-    "idris.idris2Mode": true,
-    "idris.idrisPath": "idris2",
+    "window.autoDetectColorScheme": true,
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorCustomizations": {
+        "[Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        },
+        "[Default Dark Modern]": {
+            "editor.inlineValuesBackground": "#00000000",
+            "editor.inlineValuesForeground": "#00000000",
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        },
+        "[Solarized Light]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        }
+    },
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.tree.renderIndentGuides": "none"
 }

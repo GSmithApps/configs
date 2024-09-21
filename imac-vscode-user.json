@@ -1,0 +1,29 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnType": true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "editor.unicodeHighlight.allowedCharacters": {
+        "σ": true
+    },
+    "files.autoSave": "afterDelay",
+    "git.autofetch": true,
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": true,
+        "plaintext": false,
+        "scminput": false,
+        "yaml": false
+    },
+    "gitlens.hovers.currentLine.over": "line",
+    "hediet.vscode-drawio.theme": "Kennedy",
+    "julia.enableTelemetry": true,
+    "julia.execution.codeInREPL": true,
+    "julia.symbolCacheDownload": true,
+    "latex-workshop.linting.chktex.enabled": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "window.zoomLevel": 1
+}
