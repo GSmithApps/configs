@@ -10,6 +10,8 @@
     "editor.unicodeHighlight.allowedCharacters": {
         "σ": true
     },
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.indentation": false,
     "editor.lineNumbers": "off",
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": "off",
@@ -32,5 +34,16 @@
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
-    "window.autoDetectColorScheme": true
+    "window.autoDetectColorScheme": true,
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorCustomizations": {
+        "[Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        },
+        "[Default Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        },
+    },
 }

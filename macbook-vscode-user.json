@@ -46,15 +46,9 @@
             "editor.lineHighlightBorder": "#00000000"
         },
         "[Default Dark Modern]": {
-            "editor.inlineValuesBackground": "#00000000",
-            "editor.inlineValuesForeground": "#00000000",
             "editor.lineHighlightBackground": "#00000000",
             "editor.lineHighlightBorder": "#00000000"
         },
-        "[Solarized Light]": {
-            "editor.lineHighlightBackground": "#00000000",
-            "editor.lineHighlightBorder": "#00000000"
-        }
     },
     "workbench.preferredLightColorTheme": "Solarized Light",
     "workbench.tree.renderIndentGuides": "none"
