@@ -39,6 +39,7 @@
     "julia.symbolCacheDownload": true,
     "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.linting.chktex.enabled": true,
+    "scm.diffDecorations": "none",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
@@ -50,6 +51,14 @@
             "editor.lineHighlightBorder": "#00000000"
         },
         "[Default Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        },
+        "[Default Solarized Light]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        },
+        "[Solarized Light]": {
             "editor.lineHighlightBackground": "#00000000",
             "editor.lineHighlightBorder": "#00000000"
         }
