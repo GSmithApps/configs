@@ -1,0 +1,42 @@
+{
+    "accessibility.signals.onDebugBreak": {
+        "sound": "on"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeLens": false,
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.indentation": false,
+    "editor.lineNumbers": "off",
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.padding.top": 20,
+    "editor.parameterHints.enabled": false,
+    "editor.quickSuggestions": {
+        "other": "inline"
+    },
+    "editor.renderWhitespace": "trailing",
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.unicodeHighlight.allowedCharacters": {
+        "σ": true
+    },
+    "files.autoSave": "afterDelay",
+    "git.autofetch": true,
+    "git.pruneOnFetch": true,
+    "gitlens.currentLine.enabled": false,
+    "scm.diffDecorations": "none",
+    "window.autoDetectColorScheme": true,
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorCustomizations": {
+        "[Default Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        },
+        "[Solarized Light]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        }
+    },
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.sideBar.location": "right",
+    "workbench.tree.renderIndentGuides": "none"
+}
