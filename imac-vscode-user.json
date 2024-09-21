@@ -4,6 +4,7 @@
         "editor.formatOnType": true
     },
     "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeLens": false,
     "editor.inlineSuggest.enabled": true,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
@@ -18,15 +19,16 @@
     "editor.padding.top": 20,
     "files.autoSave": "afterDelay",
     "git.autofetch": true,
+    "github.copilot.editor.enableCodeActions": false,
     "github.copilot.enable": {
         "*": true,
-        "markdown": true,
+        "idris": false,
+        "markdown": false,
         "plaintext": false,
-        "scminput": false,
-        "yaml": false
+        "scminput": false
     },
+    "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
-    "hediet.vscode-drawio.theme": "Kennedy",
     "julia.enableTelemetry": true,
     "julia.execution.codeInREPL": true,
     "julia.symbolCacheDownload": true,
@@ -46,4 +48,6 @@
             "editor.lineHighlightBorder": "#00000000"
         },
     },
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.tree.renderIndentGuides": "none"
 }
