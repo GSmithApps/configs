@@ -26,7 +26,7 @@
 # services.xserver.desktopManager.gnome.enable = true;
 
 # Set your time zone.
-# time.timeZone = "Europe/Amsterdam";
+time.timeZone = "America/Chicago";
 
 # List packages installed in system profile. To search, run:
 # \$ nix search wget
