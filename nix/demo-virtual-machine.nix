@@ -36,6 +36,7 @@ vscodium
 python3
 nodejs
 docker
+git
 ];
 
 # Enable the OpenSSH daemon.
