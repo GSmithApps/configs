@@ -1,0 +1,69 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnType": true
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "on"
+    },
+    "cSpell.userWords": [
+        "Audax",
+        "Deepesh",
+        "Dods",
+        "Lohith",
+        "Sathya"
+    ],
+    "debug.openDebug": "neverOpen",
+    "debugpy.debugJustMyCode": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.guides.indentation": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "trailing",
+    "editor.unicodeHighlight.allowedCharacters": {
+        "σ": true
+    },
+    "explorer.autoReveal": false,
+    "files.autoSave": "afterDelay",
+    "git-graph.repository.commits.fetchAvatars": true,
+    "git.autofetch": "all",
+    "git.confirmSync": false,
+    "git.pruneOnFetch": true,
+    "git.suggestSmartCommit": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": true,
+        "plaintext": true,
+        "scminput": false
+    },
+    "gitlens.autolinks": [
+        {
+            "prefix": "DB-",
+            "url": "https://securitybenefit.atlassian.net/browse/DB-<num>"
+        }
+    ],
+    "gitlens.defaultGravatarsStyle": "identicon",
+    "graphviz-interactive-preview.renderLockAdditionalTimeout": 4000,
+    "hediet.vscode-drawio.resizeImages": null,
+    "jupyter.debugJustMyCode": false,
+    "remote.SSH.remotePlatform": {
+        "sbawslinuxappq": "linux"
+    },
+    "security.allowedUNCHosts": [
+        "sbawsdtapp04q",
+        "sbawsdtapp04p"
+    ],
+    "snyk.advanced.cliPath": "C:\\Users\\smithg\\AppData\\Local\\snyk-ls\\snyk-win.exe",
+    "snyk.folderConfigs": null,
+    "snyk.yesWelcomeNotification": false,
+    "testing.automaticallyOpenPeekView": "never",
+    "testing.openTesting": "neverOpen",
+    "win-ca.inject": "append",
+    "window.autoDetectColorScheme": true,
+    "window.menuBarVisibility": "compact",
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.sideBar.location": "right"
+}
