@@ -37,6 +37,7 @@
     "julia.enableTelemetry": true,
     "julia.execution.codeInREPL": true,
     "julia.symbolCacheDownload": true,
+    "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.linting.chktex.enabled": true,
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
