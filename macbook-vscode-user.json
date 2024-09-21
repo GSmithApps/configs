@@ -6,6 +6,9 @@
     "editor.codeLens": false,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
+    "editor.unicodeHighlight.allowedCharacters": {
+        "σ": true
+    },
     "editor.guides.highlightActiveIndentation": false,
     "editor.guides.indentation": false,
     "editor.lineNumbers": "off",
@@ -13,6 +16,7 @@
     "editor.occurrencesHighlight": "off",
     "editor.padding.top": 20,
     "files.autoSave": "afterDelay",
+    "git.autofetch": true,
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.editor.enableCodeActions": false,
     "github.copilot.enable": {
