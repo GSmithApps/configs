@@ -71,15 +71,7 @@
     "window.menuBarVisibility": "compact",
     "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
-        "[Dark Modern]": {
-            "editor.lineHighlightBackground": "#00000000",
-            "editor.lineHighlightBorder": "#00000000"
-        },
         "[Default Dark Modern]": {
-            "editor.lineHighlightBackground": "#00000000",
-            "editor.lineHighlightBorder": "#00000000"
-        },
-        "[Default Solarized Light]": {
             "editor.lineHighlightBackground": "#00000000",
             "editor.lineHighlightBorder": "#00000000"
         },
