@@ -36,6 +36,7 @@
     "idris.idrisPath": "idris2",
     "julia.symbolCacheDownload": true,
     "jupyter.askForKernelRestart": false,
+    "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.linting.chktex.enabled": true,
     "scm.diffDecorations": "none",
     "terminal.integrated.commandsToSkipShell": [
