@@ -16,9 +16,15 @@
     "debug.openDebug": "neverOpen",
     "debugpy.debugJustMyCode": false,
     "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeLens": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
     "editor.guides.indentation": false,
     "editor.inlineSuggest.enabled": true,
+    "editor.lineNumbers": "off",
     "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.padding.top": 20,
     "editor.renderWhitespace": "trailing",
     "editor.unicodeHighlight.allowedCharacters": {
         "σ": true
@@ -62,8 +68,18 @@
     "win-ca.inject": "append",
     "window.autoDetectColorScheme": true,
     "window.menuBarVisibility": "compact",
-    "window.zoomLevel": -1,
-    "workbench.colorTheme": "Solarized Light",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorCustomizations": {
+        "[Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        },
+        "[Default Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000"
+        }
+    },
     "workbench.preferredLightColorTheme": "Solarized Light",
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "workbench.tree.renderIndentGuides": "none"
 }

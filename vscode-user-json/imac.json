@@ -1,23 +1,29 @@
 {
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnType": true
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "on"
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.codeLens": false,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "editor.unicodeHighlight.allowedCharacters": {
-        "σ": true
-    },
     "editor.guides.highlightActiveIndentation": false,
     "editor.guides.indentation": false,
+    "editor.inlineSuggest.enabled": true,
     "editor.lineNumbers": "off",
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": "off",
     "editor.padding.top": 20,
+    "editor.renderWhitespace": "trailing",
+    "editor.unicodeHighlight.allowedCharacters": {
+        "σ": true
+    },
     "files.autoSave": "afterDelay",
     "git.autofetch": true,
-    "github.copilot.editor.enableAutoCompletions": true,
+    "git.pruneOnFetch": true,
     "github.copilot.editor.enableCodeActions": false,
     "github.copilot.enable": {
         "*": true,
@@ -27,14 +33,12 @@
         "scminput": false
     },
     "gitlens.currentLine.enabled": false,
-    "idris.idris2Mode": true,
-    "idris.idrisPath": "idris2",
+    "gitlens.hovers.currentLine.over": "line",
+    "julia.enableTelemetry": true,
+    "julia.execution.codeInREPL": true,
     "julia.symbolCacheDownload": true,
-    "jupyter.askForKernelRestart": false,
     "latex-workshop.linting.chktex.enabled": true,
-    "scm.diffDecorations": "none",
     "terminal.integrated.commandsToSkipShell": [
-        "github.copilot.terminal.suggestCommand",
         "language-julia.interrupt"
     ],
     "window.autoDetectColorScheme": true,
@@ -47,8 +51,9 @@
         "[Default Dark Modern]": {
             "editor.lineHighlightBackground": "#00000000",
             "editor.lineHighlightBorder": "#00000000"
-        },
+        }
     },
     "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.sideBar.location": "right",
     "workbench.tree.renderIndentGuides": "none"
 }
