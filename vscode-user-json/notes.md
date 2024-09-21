@@ -1,1 +1,1 @@
-gitlens.currentLine.enabled is current line blame
+- `gitlens.currentLine.enabled`: current line blame
