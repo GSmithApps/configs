@@ -1,1 +1,2 @@
 - `gitlens.currentLine.enabled`: current line blame
+- `"scm.diffDecorations": "none"`: thin blue or green or red in the gutter
