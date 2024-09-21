@@ -1,0 +1,57 @@
+{
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.colorCustomizations": {
+        "[Solarized Light]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000",
+        },
+        "[Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000",
+        },
+        "[Default Dark Modern]": {
+            "editor.lineHighlightBackground": "#00000000",
+            "editor.lineHighlightBorder": "#00000000",
+            "editor.inlineValuesBackground": "#00000000",
+            "editor.inlineValuesForeground": "#00000000",
+        }
+    },
+    "gitlens.currentLine.enabled": false,
+    "editor.occurrencesHighlight": "off",
+    "scm.diffDecorations": "none",
+    "editor.codeLens": false,
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.activityBar.location": "hidden",
+    "editor.padding.top": 20,
+    "workbench.tree.renderIndentGuides": "none",
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.indentation": false,
+    "editor.lineNumbers": "off",
+    "editor.minimap.enabled": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "jupyter.askForKernelRestart": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "idris": false
+    },
+    "github.copilot.editor.enableCodeActions": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "github.copilot.terminal.suggestCommand",
+        "language-julia.interrupt"
+    ],
+    "hediet.vscode-drawio.resizeImages": null,
+    "latex-workshop.linting.chktex.enabled": true,
+    "julia.symbolCacheDownload": true,
+    "idris.idris2Mode": true,
+    "idris.idrisPath": "idris2",
+}
