@@ -9,11 +9,13 @@
 # Mount a VirtualBox shared folder.
 # This is configurable in the VirtualBox menu at
 # Machine / Settings / Shared Folders.
-# fileSystems."/mnt" = {
-#   fsType = "vboxsf";
-#   device = "nameofdevicetomount";
-#   options = [ "rw" ];
-# };
+fileSystems."/mnt/shared" = {
+  fsType = "vboxsf";
+  device = "vbox-xfer";
+  options = [ "rw" ];
+};
+
+virtualisation.virtualbox.guest.enable = true;
 
 # By default, the NixOS VirtualBox demo image includes SDDM and Plasma.
 # If you prefer another desktop manager or display manager, you may want
@@ -28,15 +30,26 @@
 # Set your time zone.
 time.timeZone = "America/Chicago";
 
+users.users.demo = {
+  shell = pkgs.zsh;
+};
+
+programs.zsh = {
+  enable = true;
+  enableCompletion = true;
+};
+
+nixpkgs.config.allowUnfree = true;
+
 # List packages installed in system profile. To search, run:
 # \$ nix search wget
 environment.systemPackages = with pkgs; [
-#   wget vim
-vscodium
-python3
-nodejs
-docker
+vscode
+obsidian
+python312
 git
+zsh
+oh-my-zsh
 ];
 
 # Enable the OpenSSH daemon.
