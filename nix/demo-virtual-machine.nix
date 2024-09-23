@@ -31,13 +31,13 @@ virtualisation.virtualbox.guest.enable = true;
 time.timeZone = "America/Chicago";
 
 users.users.demo = {
-  shell = pkgs.zsh;
-};
+#   shell = pkgs.zsh;
+# };
 
-programs.zsh = {
-  enable = true;
-  enableCompletion = true;
-};
+# programs.zsh = {
+#   enable = true;
+#   enableCompletion = true;
+# };
 
 nixpkgs.config.allowUnfree = true;
 
@@ -45,11 +45,11 @@ nixpkgs.config.allowUnfree = true;
 # \$ nix search wget
 environment.systemPackages = with pkgs; [
 vscode
-obsidian
-python312
-git
-zsh
-oh-my-zsh
+# obsidian
+# python312
+# git
+# zsh
+# oh-my-zsh
 ];
 
 # Enable the OpenSSH daemon.
