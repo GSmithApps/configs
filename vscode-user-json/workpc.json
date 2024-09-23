@@ -36,21 +36,21 @@
     "git.confirmSync": false,
     "git.pruneOnFetch": true,
     "git.suggestSmartCommit": false,
-    "github.copilot.editor.enableCodeActions": false,
     "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableCodeActions": false,
     "github.copilot.enable": {
         "*": true,
         "markdown": true,
         "plaintext": true,
         "scminput": false
     },
-    "gitlens.currentLine.enabled": false,
     "gitlens.autolinks": [
         {
             "prefix": "DB-",
             "url": "https://securitybenefit.atlassian.net/browse/DB-<num>"
         }
     ],
+    "gitlens.currentLine.enabled": false,
     "gitlens.defaultGravatarsStyle": "identicon",
     "graphviz-interactive-preview.renderLockAdditionalTimeout": 4000,
     "hediet.vscode-drawio.resizeImages": null,
@@ -71,6 +71,7 @@
     "win-ca.inject": "append",
     "window.autoDetectColorScheme": true,
     "window.menuBarVisibility": "compact",
+    "window.zoomLevel": -1,
     "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "[Default Dark Modern]": {
@@ -84,5 +85,6 @@
     },
     "workbench.preferredLightColorTheme": "Solarized Light",
     "workbench.sideBar.location": "right",
-    "workbench.tree.renderIndentGuides": "none"
+    "workbench.tree.renderIndentGuides": "none",
+    "breadcrumbs.enabled": false
 }
