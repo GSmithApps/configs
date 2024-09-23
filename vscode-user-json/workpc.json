@@ -25,7 +25,7 @@
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": "off",
     "editor.padding.top": 20,
-    "editor.renderWhitespace": "trailing",
+    "editor.renderWhitespace": "selection",
     "editor.unicodeHighlight.allowedCharacters": {
         "σ": true
     },
