@@ -121,15 +121,22 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
+  # ========
+  # My stuff
+  # ========
 
-  # add these if you want to share a virtual file system
+
+  # |----------------------------------------------------
+  # | add these if you want to share a virtual file system
+  
   # fileSystems."/mnt/shared" = {
   #   fsType = "vboxsf";
   #   device = "vbox-xfer";
   #   options = [ "rw" ];
   # };
   
-  # virtualisation.virtualbox.guest.enable = true;
+  # | virtualisation.virtualbox.guest.enable = true;
+  # |----------------------------------------------------
 
 
   # List packages installed in system profile. To search, run:
@@ -143,6 +150,6 @@
     obsidian
   ];
 
-  nix.settings.exterimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   
 }
