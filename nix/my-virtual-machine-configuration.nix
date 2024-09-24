@@ -94,24 +94,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    (vscode-with-extensions.override {
-      vscodeExtensions = with vscode-extensions; [
-        jnoortheen.nix-ide
-      ];
-    })
-  ];
-  
-  fileSystems."/mnt/shared" = {
-    fsType = "vboxsf";
-    device = "vbox-xfer";
-    options = [ "rw" ];
-  };
-  
-  virtualisation.virtualbox.guest.enable = true;
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -139,4 +121,26 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
+
+  nix.settings.exterimental-features = ["nix-command" "flakes"];
+
+
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+    (vscode-with-extensions.override {
+      vscodeExtensions = with vscode-extensions; [
+        jnoortheen.nix-ide
+      ];
+    })
+    obsidian
+  ];
+  
+  fileSystems."/mnt/shared" = {
+    fsType = "vboxsf";
+    device = "vbox-xfer";
+    options = [ "rw" ];
+  };
+  
+  virtualisation.virtualbox.guest.enable = true;
 }
