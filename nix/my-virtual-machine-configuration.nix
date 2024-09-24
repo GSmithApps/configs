@@ -145,9 +145,14 @@
     (vscode-with-extensions.override {
       vscodeExtensions = with vscode-extensions; [
         jnoortheen.nix-ide
+        eamodio.gitlens
+        mhutchie.git-graph
+        mechatroner.rainbow-csv
+        hediet.vscode-drawio
       ];
     })
     obsidian
+    git
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
