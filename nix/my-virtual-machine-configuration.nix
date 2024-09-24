@@ -122,7 +122,14 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
 
-  nix.settings.exterimental-features = ["nix-command" "flakes"];
+  # add these if you want to share a virtual file system
+  # fileSystems."/mnt/shared" = {
+  #   fsType = "vboxsf";
+  #   device = "vbox-xfer";
+  #   options = [ "rw" ];
+  # };
+  
+  # virtualisation.virtualbox.guest.enable = true;
 
 
   # List packages installed in system profile. To search, run:
@@ -135,12 +142,7 @@
     })
     obsidian
   ];
+
+  nix.settings.exterimental-features = ["nix-command" "flakes"];
   
-  fileSystems."/mnt/shared" = {
-    fsType = "vboxsf";
-    device = "vbox-xfer";
-    options = [ "rw" ];
-  };
-  
-  virtualisation.virtualbox.guest.enable = true;
 }
