@@ -92,4 +92,17 @@
     userEmail = "14.gsmith.14@gmail.com";
   };
 
+  nixpkgs.config.allowUnfree = true;
+
+  programs.vscode = {
+    enable = true;
+    userSettings = {
+      # "editor.fontSize" = 14;
+      # "editor.tabSize" = 2;
+      # "files.autoSave" = "afterDelay";
+      # "workbench.colorTheme" = "Monokai";
+      "window.autoDetectColorScheme" = true;
+    };
+  };
+
 }
