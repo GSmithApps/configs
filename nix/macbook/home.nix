@@ -97,11 +97,26 @@
   programs.vscode = {
     enable = true;
     userSettings = {
-      # "editor.fontSize" = 14;
-      # "editor.tabSize" = 2;
       # "files.autoSave" = "afterDelay";
-      # "workbench.colorTheme" = "Monokai";
       "window.autoDetectColorScheme" = true;
+      "workbench.preferredLightColorTheme" = "Solarized Light";
+      "workbench.colorCustomizations" = {
+        "[Solarized Light]" = {
+          "editor.lineHighlightBackground" = "#00000000";
+          "editor.lineHighlightBorder" = "#00000000";
+        };
+        "[Default Dark Modern]" = {
+          "editor.lineHighlightBackground" = "#00000000";
+          "editor.lineHighlightBorder" = "#00000000";
+        };
+      };
+      "editor.guides.highlightActiveIndentation" = false;
+      "editor.guides.indentation" = false;
+      "editor.lineNumbers" = "off";
+      "editor.minimap.enabled" = false;
+      "editor.occurrencesHighlight" = "off";
+      "editor.padding.top" = 20;
+      "editor.renderWhitespace" = "trailing";
     };
   };
 
