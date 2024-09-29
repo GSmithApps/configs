@@ -17,7 +17,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -34,7 +34,43 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+
+    obsidian
+    (pkgs.vscode-with-extensions.override {
+      vscodeExtensions = with pkgs.vscode-extensions; [
+        jnoortheen.nix-ide
+        eamodio.gitlens
+        mhutchie.git-graph
+        mechatroner.rainbow-csv
+        hediet.vscode-drawio
+      ];
+    })
   ];
+
+  # Manage VSCode user settings
+  home.file.".config/Code/User/settings.json".text = builtins.toJSON {
+    # "files.autoSave" = "afterDelay";
+    "window.autoDetectColorScheme" = true;
+    "workbench.preferredLightColorTheme" = "Solarized Light";
+    "workbench.colorCustomizations" = {
+      "[Solarized Light]" = {
+        "editor.lineHighlightBackground" = "#00000000";
+        "editor.lineHighlightBorder" = "#00000000";
+      };
+      "[Default Dark Modern]" = {
+        "editor.lineHighlightBackground" = "#00000000";
+        "editor.lineHighlightBorder" = "#00000000";
+      };
+    };
+    "editor.guides.highlightActiveIndentation" = false;
+    "editor.guides.indentation" = false;
+    "editor.lineNumbers" = "off";
+    "editor.minimap.enabled" = false;
+    "editor.occurrencesHighlight" = "off";
+    "editor.padding.top" = 20;
+    "editor.renderWhitespace" = "trailing";
+  };
+
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -93,31 +129,5 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
-  programs.vscode = {
-    enable = true;
-    userSettings = {
-      # "files.autoSave" = "afterDelay";
-      "window.autoDetectColorScheme" = true;
-      "workbench.preferredLightColorTheme" = "Solarized Light";
-      "workbench.colorCustomizations" = {
-        "[Solarized Light]" = {
-          "editor.lineHighlightBackground" = "#00000000";
-          "editor.lineHighlightBorder" = "#00000000";
-        };
-        "[Default Dark Modern]" = {
-          "editor.lineHighlightBackground" = "#00000000";
-          "editor.lineHighlightBorder" = "#00000000";
-        };
-      };
-      "editor.guides.highlightActiveIndentation" = false;
-      "editor.guides.indentation" = false;
-      "editor.lineNumbers" = "off";
-      "editor.minimap.enabled" = false;
-      "editor.occurrencesHighlight" = "off";
-      "editor.padding.top" = 20;
-      "editor.renderWhitespace" = "trailing";
-    };
-  };
 
 }

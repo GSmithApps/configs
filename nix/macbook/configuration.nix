@@ -124,16 +124,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (vscode-with-extensions.override {
-      vscodeExtensions = with vscode-extensions; [
-        jnoortheen.nix-ide
-        eamodio.gitlens
-        mhutchie.git-graph
-        mechatroner.rainbow-csv
-        hediet.vscode-drawio
-      ];
-    })
-    obsidian
     git
     kubernetes
     docker
