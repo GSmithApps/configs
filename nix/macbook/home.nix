@@ -47,31 +47,6 @@
     })
   ];
 
-  # Manage VSCode user settings
-  home.file.".config/Code/User/settings.json".text = builtins.toJSON {
-    # "files.autoSave" = "afterDelay";
-    "window.autoDetectColorScheme" = true;
-    "workbench.preferredLightColorTheme" = "Solarized Light";
-    "workbench.colorCustomizations" = {
-      "[Solarized Light]" = {
-        "editor.lineHighlightBackground" = "#00000000";
-        "editor.lineHighlightBorder" = "#00000000";
-      };
-      "[Default Dark Modern]" = {
-        "editor.lineHighlightBackground" = "#00000000";
-        "editor.lineHighlightBorder" = "#00000000";
-      };
-    };
-    "editor.guides.highlightActiveIndentation" = false;
-    "editor.guides.indentation" = false;
-    "editor.lineNumbers" = "off";
-    "editor.minimap.enabled" = false;
-    "editor.occurrencesHighlight" = "off";
-    "editor.padding.top" = 20;
-    "editor.renderWhitespace" = "trailing";
-  };
-
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -85,6 +60,29 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".config/Code/User/settings.json".text = builtins.toJSON {
+      # "files.autoSave" = "afterDelay";
+      "window.autoDetectColorScheme" = true;
+      "workbench.preferredLightColorTheme" = "Solarized Light";
+      "workbench.colorCustomizations" = {
+        "[Solarized Light]" = {
+          "editor.lineHighlightBackground" = "#00000000";
+          "editor.lineHighlightBorder" = "#00000000";
+        };
+        "[Default Dark Modern]" = {
+          "editor.lineHighlightBackground" = "#00000000";
+          "editor.lineHighlightBorder" = "#00000000";
+        };
+      };
+      "editor.guides.highlightActiveIndentation" = false;
+      "editor.guides.indentation" = false;
+      "editor.lineNumbers" = "off";
+      "editor.minimap.enabled" = false;
+      "editor.occurrencesHighlight" = "off";
+      "editor.padding.top" = 20;
+      "editor.renderWhitespace" = "trailing";
+    };
   };
 
   # Home Manager can also manage your environment variables through
