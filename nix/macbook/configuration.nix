@@ -127,8 +127,6 @@
     git
     kubernetes
     docker
-    zsh
-    oh-my-zsh
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
