@@ -45,6 +45,8 @@
         hediet.vscode-drawio
       ];
     })
+    fira-code-nerdfont
+    gnome.gnome-terminal
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -92,7 +94,7 @@
     enable = true;
     oh-my-zsh = {
       enable = true;
-      theme = "robbyrussell";  # Or any other theme you prefer
+      theme = "agnoster";  # Or any other theme you prefer
       plugins = [ "git" "docker" "kubectl" ];  # Add any plugins you want
     };
   };
@@ -104,5 +106,32 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+  dconf.settings = {
+    "org/gnome/terminal/legacy" = {
+      theme-variant = "dark";
+      default-show-menubar = false;
+    };
+
+    "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9" = {
+      use-system-font = false;
+      # font = "Monospace 12";
+      font = "FiraCode Nerd Font 12";
+      use-theme-colors = false;
+      background-color = "rgb(60,180,120)";
+      foreground-color = "rgb(255,255,255)";
+      bold-color-same-as-fg = true;
+      bold-is-bright = true;
+      cursor-shape = "block";
+      encoding = "UTF-8";
+      # Add transparency
+      use-transparent-background = true;
+      background-transparency-percent = 50;
+      # Enable font ligatures
+      allow-bold = true;
+      font-use-system-font = false;
+      use-theme-background = false;
+    };
+  };
 
 }
