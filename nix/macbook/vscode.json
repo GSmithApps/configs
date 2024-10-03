@@ -11,11 +11,13 @@
             "editor.lineHighlightBorder": "#00000000"
         }
     },
+    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontLigatures": true,
     "editor.guides.highlightActiveIndentation": false,
     "editor.guides.indentation": false,
     "editor.lineNumbers": "off",
     "editor.minimap.enabled": false,
     "editor.padding.top": 20,
     "editor.occurrencesHighlight": "off",
-    "editor.renderWhitespace": "selection"
+    "editor.renderWhitespace": "all"
 }
