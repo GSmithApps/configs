@@ -5,6 +5,7 @@
     "accessibility.signals.onDebugBreak": {
         "sound": "on"
     },
+    
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.codeLens": false,
     "editor.fontFamily": "Fira Code",
