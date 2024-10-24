@@ -60,6 +60,22 @@
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
+  
+  
+  hardware = {
+    enableAllFirmware = true;
+    # Enable Broadcom support
+    # broadcom.enable = true;
+    
+    # Add necessary firmware
+    firmware = with pkgs; [ 
+      linux-firmware
+      broadcom-bt-firmware
+      wireless-regdb
+    ];
+  };
+  
+  
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -125,6 +141,10 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+    pciutils
+    iw
+    # wireless-tools
+    ethtool
   ];
   
 }
