@@ -1,3 +1,5 @@
+# broken
+
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -30,6 +32,8 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
@@ -76,6 +80,7 @@
     ];
   };
   
+  
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -120,7 +125,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  # services.openssh.enable = true
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -141,6 +146,13 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+    pciutils
+    iw
+    # wireless-tools
+    ethtool
+    linux-firmware
+    kmod
+    git
   ];
   
 }

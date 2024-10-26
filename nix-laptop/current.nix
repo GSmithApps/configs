@@ -1,4 +1,4 @@
-#config
+# current
 
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
@@ -27,15 +27,21 @@
   boot = {
     kernelModules = [ "wl" ];
     extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
-    blacklistedKernelModules = [ "brcmfmac" "brcmutil" ];
+    blacklistedKernelModules = [ "brcmfmac" "brcmutil" "bcma" "b43" "ssb"];
+    
+    kernelParams = ["pcie_aspm=off"];
   };
 
-  networking.networkmanager = {
-    enable = true;
-    wifi = {
-      powersave = false;
-      scanRandMacAddress = false;
-    };
+  networking = {
+    networkmanager = {
+	    enable = true;
+	    wifi = {
+	      powersave = false;
+	      scanRandMacAddress = false;
+	      
+	    };
+     };
+     wireless.enable = false;
   };
 
   # Set your time zone.
@@ -88,6 +94,7 @@
       linux-firmware
       broadcom-bt-firmware
       wireless-regdb
+      firmwareLinuxNonfree
     ];
   };
   
