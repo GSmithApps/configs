@@ -1,5 +1,3 @@
-#config
-
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -24,20 +22,28 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  boot = {
-    kernelModules = [ "wl" ];
-    extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
-    blacklistedKernelModules = [ "brcmfmac" "brcmutil" ];
-  };
+boot = {
+    kernelModules = [ ];  # Remove wl
+    extraModulePackages = [ ];  # Remove broadcom_sta
+    blacklistedKernelModules = [ "wl" ];  # Blacklist wl instead
+};
 
-  networking.networkmanager = {
-    enable = true;
-    wifi = {
-      powersave = false;
-      scanRandMacAddress = false;
+  networking = {
+    networkmanager = {
+      enable = true;
+      wifi.powersave = false;
     };
+    wireless.enable = false;  # Disable wpa_supplicant as we're using NetworkManager
   };
 
+  hardware = {
+    enableAllFirmware = true;
+    firmware = with pkgs; [
+      linux-firmware
+      broadcom-bt-firmware
+    ];
+  };
+  
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
@@ -76,21 +82,6 @@
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
-  
-  
-  hardware = {
-    enableAllFirmware = true;
-    # Enable Broadcom support
-    # broadcom.enable = true;
-    
-    # Add necessary firmware
-    firmware = with pkgs; [ 
-      linux-firmware
-      broadcom-bt-firmware
-      wireless-regdb
-    ];
-  };
-  
   
   security.rtkit.enable = true;
   services.pipewire = {
@@ -159,9 +150,6 @@
   #  wget
     pciutils
     iw
-    # wireless-tools
-    ethtool
-    linux-firmware
     kmod
     git
   ];
