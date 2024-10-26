@@ -11,9 +11,8 @@
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -23,13 +22,35 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+boot = {
+    kernelModules = [ ];  # Remove wl
+    extraModulePackages = [ ];  # Remove broadcom_sta
+    blacklistedKernelModules = [ "wl" ];  # Blacklist wl instead
+};
 
+  networking = {
+    networkmanager = {
+      enable = true;
+      wifi.powersave = false;
+    };
+    wireless.enable = false;  # Disable wpa_supplicant as we're using NetworkManager
+  };
+
+  hardware = {
+    enableAllFirmware = true;
+    firmware = with pkgs; [
+      linux-firmware
+      broadcom-bt-firmware
+    ];
+  };
+  
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
@@ -53,7 +74,7 @@
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
-    variant = "colemak";
+    variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -61,6 +82,7 @@
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
+  
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -105,7 +127,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  # services.openssh.enable = true
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -121,40 +143,20 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  # ========
-  # My stuff
-  # ========
-
-
-  # |----------------------------------------------------
-  # | add these if you want to share a virtual file system
-  
-  # fileSystems."/mnt/shared" = {
-  #   fsType = "vboxsf";
-  #   device = "vbox-xfer";
-  #   options = [ "rw" ];
-  # };
-  
-  # | virtualisation.virtualbox.guest.enable = true;
-  # |----------------------------------------------------
-
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (vscode-with-extensions.override {
-      vscodeExtensions = with vscode-extensions; [
-        jnoortheen.nix-ide
-        eamodio.gitlens
-        mhutchie.git-graph
-        mechatroner.rainbow-csv
-        hediet.vscode-drawio
-      ];
-    })
-    obsidian
+  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #  wget
+    pciutils
+    iw
+    kmod
     git
   ];
+   
+  programs.zsh.enable = true;
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-  
+  users.users.grants = {
+    shell = pkgs.zsh;
+  }; 
 }
